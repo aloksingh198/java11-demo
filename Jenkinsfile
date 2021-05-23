@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        SONAR_TOKEN= '64329bab7f2264e78495529bfc2382f13ef589de'
+        SONAR_TOKEN= 'a3f3e8803a360e23d9e0cb74fc19a6b280b602a8'
         APP_HOME='/home/app'
         PRAGRA_BATCH='devs'
     }
@@ -40,7 +40,7 @@ pipeline {
         }
        stage('Static Code Analaysis') {
             steps {
-                withSonarQubeEnv(credentialsId: 'sonar_token', installationName: 'sonarcloud') {
+                withSonarQubeEnv(credentialsId: 'sonartoken', installationName: 'sonarcloud') {
                     sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
                 }
             }
