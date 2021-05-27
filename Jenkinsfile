@@ -82,7 +82,7 @@ pipeline {
     // Optional - Only if this build is associated with a project in Artifactory, set the project key as follows.
     project: 'my-project-key'
 )
-    }    
+            }
 }
     
-    }
+    
