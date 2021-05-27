@@ -56,8 +56,7 @@ pipeline {
                 sh 'mvn package'
             }
         }
-    }
-tage('Publish Arctifactory'){
+        stage('Publish Arctifactory'){
     rtMavenResolver (
     id: 'resolver',
     serverId: 'artifactory-1',
@@ -94,8 +93,9 @@ rtMavenRun (
     post {
         always {
             echo 'ALL GOOD '
-        }
+        // }
     }
 
 
 }
+    
